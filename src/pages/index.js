@@ -2,8 +2,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-  const test5 = 1
-  test5 = 2
+  const test6 = 1
+  test6 = 2
 
   return (
     <div className={styles.container}>
