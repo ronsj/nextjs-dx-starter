@@ -6,17 +6,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "type-check": "tsc --pretty --noEmit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx|js|jsx)": [
+      "npm lint",
+      "npm format"
+    ]
   },
   "dependencies": {
     "next": "10.0.8",
     "react": "17.0.1",
     "react-dom": "17.0.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test"
-    }
   },
   "devDependencies": {
     "@types/node": "^14.14.33",
