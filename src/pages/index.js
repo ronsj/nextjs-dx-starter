@@ -2,6 +2,9 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  // Test - Prettify this with husky
+  const messyObject = {foo:     'bar',a:1,
+b:2}
   const test6 = 1
   test6 = 2
 
