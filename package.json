@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write .",
-    "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx --fix-dry-run",
+    "lint": "eslint . --format=pretty --ext ts --ext tsx --ext js --ext jsx --fix-dry-run",
     "type-check": "tsc --pretty --noEmit"
   },
   "husky": {
@@ -36,6 +36,7 @@
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-react-app": "^6.0.0",
+    "eslint-formatter-pretty": "^4.0.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
