@@ -10,7 +10,8 @@
     "lint": "eslint . --format=pretty --ext ts --ext tsx --ext js --ext jsx --fix-dry-run",
     "type-check": "tsc --pretty --noEmit",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test-dev": "cypress open"
   },
   "husky": {
     "hooks": {
@@ -41,6 +42,7 @@
     "@typescript-eslint/parser": "^4.17.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
+    "cypress": "^6.6.0",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-react-app": "^6.0.0",
