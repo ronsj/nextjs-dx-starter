@@ -3,11 +3,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   // Test - Prettify this with husky
-  class
-  const messyObject = {foo:     'bar',a:1,
-b:2}
-  const test6 = 1
-  test6 = 2
+  const messyObject = { foo: 'bar', a: 1, b: 2 }
 
   return (
     <div className={styles.container}>
