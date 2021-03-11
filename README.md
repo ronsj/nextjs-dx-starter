@@ -45,4 +45,8 @@ The `src/pages/api` directory is mapped to `/api/*`. Files in this directory are
 
 ## Deploy
 
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/ronsj/nextjs-dx-starter&project-name=nextjs-dx-starter&repository-name=nextjs-dx-starter)
+
 Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
