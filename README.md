@@ -10,8 +10,7 @@ A developer-friendly NextJS app configured with:
 
 ## Requirements
 
-- MacOS
-- Node.js
+- [Node.js](https://nodejs.org/) installed via (Node Version Manager)[https://github.com/nvm-sh/nvm]
 
 ## Getting Started
 
