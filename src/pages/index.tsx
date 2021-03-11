@@ -23,7 +23,13 @@ export default function Home() {
 
         <Link href="/readme" passHref>
           <a className="link" href="replace">
-            View Readme
+            Readme
+          </a>
+        </Link>
+        <br />
+        <Link href="https://github.com/ronsj/nextjs-dx-starter" passHref>
+          <a className="link" href="replace">
+            GitHub
           </a>
         </Link>
       </main>
