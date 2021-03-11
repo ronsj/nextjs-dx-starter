@@ -9,6 +9,7 @@ A developer-friendly NextJS app configured with:
 - Testing with [Cypress](https://www.cypress.io/), [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 
 ## Requirements
+
 - MacOS
 - Node.js
 
@@ -43,4 +44,4 @@ The `src/pages/api` directory is mapped to `/api/*`. Files in this directory are
 
 ## Deploy
 
-Check out  [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
