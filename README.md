@@ -10,7 +10,7 @@ A developer-friendly NextJS app configured with:
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) installed via (Node Version Manager)[https://github.com/nvm-sh/nvm]
+- [Node.js](https://nodejs.org/) installed via [Node Version Manager](https://github.com/nvm-sh/nvm)
 
 ## Getting Started
 
