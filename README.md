@@ -1,6 +1,6 @@
-# NextJS Typescript Boilerplate
+# NextJS DX Starter Kit
 
-Bootstrap a developer-friendly NextJS app configured with:
+A developer-friendly NextJS app configured with:
 
 - [Typescript](https://www.typescriptlang.org/)
 - Linting with [ESLint](https://eslint.org/)
@@ -24,6 +24,6 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `src/pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Deploy on Vercel
+## Deploy
 
 Check out  [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
