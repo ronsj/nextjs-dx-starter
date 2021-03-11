@@ -4,3 +4,4 @@ yarn.lock
 package-lock.json
 public
 cypress/integration/examples
+cypress/fixtures/example.json
