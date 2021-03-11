@@ -10,23 +10,7 @@ A developer-friendly NextJS app configured with:
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `src/pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `src/pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## HTTPS and HTTP2
-
-Create the public and private keys:
+### Enable HTTP/2 and HTTPS on localhost. Create the public and private keys:
 
 ```bash
 openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost' \
@@ -34,6 +18,20 @@ openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost' \
 ```
 
 Guide: [How to install a local SSL certificate in macOS](https://flaviocopes.com/macos-install-ssl-local/)
+
+### Run the development server:
+
+```bash
+npm run dev
+```
+
+Open [https://localhost:3000](https://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `src/pages/index.js`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [https://localhost:3000/api/hello](https://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+
+The `src/pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Deploy
 
