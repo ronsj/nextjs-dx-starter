@@ -1,6 +1,7 @@
 {
-  "extends": ["react-app", "prettier"],
-  "globals": {
-    "cy": true
+  "plugins": ["cypress"],
+  "extends": ["react-app", "prettier", "plugin:cypress/recommended"],
+  "env": {
+    "cypress/globals": true
   }
 }

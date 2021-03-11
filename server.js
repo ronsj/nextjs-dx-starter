@@ -1,27 +1,23 @@
+const { createServer } = require('https')
+const { parse } = require('url')
 const next = require('next')
-const http2 = require('http2')
 const fs = require('fs')
-const log = require('next/dist/build/output/log')
 
-const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
-
-// Init the Next app:
 const app = next({ dev })
+const handle = app.getRequestHandler()
 
-// Create the secure HTTPS server:
-// Don't forget to create the keys for your development
-const server = http2.createSecureServer({
-  key: fs.readFileSync('localhost-privkey.pem'),
-  cert: fs.readFileSync('localhost-cert.pem'),
-})
+const httpsOptions = {
+  key: fs.readFileSync('./localhost.key'),
+  cert: fs.readFileSync('./localhost.crt'),
+}
 
 app.prepare().then(() => {
-  server.on('error', (err) => console.error(err))
-  server.on('request', (req, res) => {
-    app.render(req, res, req.url || '/', req.query)
+  createServer(httpsOptions, (req, res) => {
+    const parsedUrl = parse(req.url, true)
+    handle(req, res, parsedUrl)
+  }).listen(3000, (err) => {
+    if (err) throw err
+    console.log('> Ready on https://localhost:3000')
   })
-  server.listen(port)
-
-  log.ready(`started server on port ${port}, url: https://localhost:${port}`)
 })

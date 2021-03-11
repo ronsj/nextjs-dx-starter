@@ -8,16 +8,24 @@ A developer-friendly NextJS app configured with:
 - Linting, typechecking and formatting on by default using [husky](https://github.com/typicode/husky) for commit hooks
 - Testing with [Cypress](https://www.cypress.io/), [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 
+## Requirements
+- MacOS
+- Node.js
+
 ## Getting Started
 
-### Enable HTTP/2 and HTTPS on localhost. Create the public and private keys:
+### Enable HTTPS on localhost. Create the public and private keys:
 
 ```bash
-openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost' \
-  -keyout localhost-privkey.pem -out localhost-cert.pem
+openssl req -x509 -out localhost.crt -keyout localhost.key \
+  -newkey rsa:2048 -nodes -sha256 \
+  -subj '/CN=localhost' -extensions EXT -config <( \
+   printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
 ```
 
-Guide: [How to install a local SSL certificate in macOS](https://flaviocopes.com/macos-install-ssl-local/)
+Open the `.crt` file. The Keychain Access app will open and add it to the "System" keychain.
+
+Double click on our "localhost" cert, under "Trust" set "When using this certificate" to "Always Trust".
 
 ### Run the development server:
 
