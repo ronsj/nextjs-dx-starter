@@ -19,7 +19,7 @@ export default function Readme(props) {
       {/* https://nextjs.org/docs/basic-features/built-in-css-support#css-in-js */}
       <style jsx>{`
         .readme {
-          margin: 2rem auto 0;
+          margin: 4rem auto 20rem;
           padding: 2rem;
           max-width: 1600px;
           background: #fff;
