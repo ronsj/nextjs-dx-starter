@@ -9,6 +9,10 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
+/**
+ * Secure your local development server with HTTPS (Next.JS):
+ * https://anmagpie.medium.com/secure-your-local-development-server-with-https-next-js-81ac6b8b3d68
+ */
 const httpsOptions = {
   key: fs.readFileSync('./localhost.key'),
   cert: fs.readFileSync('./localhost.crt'),
