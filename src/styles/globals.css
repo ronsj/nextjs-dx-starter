@@ -1,16 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
+  line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
 a {
-  color: inherit;
+  color: royalblue;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+a:hover {
+  text-decoration: underline;
+}
+
+pre {
+  padding: 1rem;
+  word-break: break-all;
+  background-color: #f1f1f1;
+}
+
+code {
+  white-space: pre-wrap;
+  font-family: 'Fira Code', Menlo, Monaco, 'Courier New', Courier, monospace;
+  background-color: #f1f1f1;
 }

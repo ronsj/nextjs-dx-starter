@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Hello from '../components/Hello'
 import styles from '../styles/Home.module.css'
 
@@ -19,6 +20,12 @@ export default function Home() {
           Get started by editing{' '}
           <code className={styles.code}>src/pages/index.tsx</code>
         </p>
+
+        <Link href="/readme" passHref>
+          <a className="link" href="replace">
+            View Readme
+          </a>
+        </Link>
       </main>
 
       <footer className={styles.footer}>
