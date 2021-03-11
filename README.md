@@ -24,6 +24,17 @@ You can start editing the page by modifying `src/pages/index.js`. The page auto-
 
 The `src/pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## HTTPS and HTTP2
+
+Create the public and private keys:
+
+```bash
+openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost' \
+  -keyout localhost-privkey.pem -out localhost-cert.pem
+```
+
+Guide: [How to install a local SSL certificate in macOS](https://flaviocopes.com/macos-install-ssl-local/)
+
 ## Deploy
 
 Check out  [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
