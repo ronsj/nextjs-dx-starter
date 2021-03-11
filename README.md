@@ -14,7 +14,9 @@ A developer-friendly NextJS app configured with:
 
 ## Getting Started
 
-### Enable HTTPS on localhost. Create the public and private keys:
+### Enable HTTPS on localhost
+
+Create the public and private keys:
 
 ```bash
 openssl req -x509 -out localhost.crt -keyout localhost.key \
@@ -25,7 +27,7 @@ openssl req -x509 -out localhost.crt -keyout localhost.key \
 
 Open the `.crt` file. The Keychain Access app will open and add it to the "System" keychain.
 
-Double click on our "localhost" cert, under "Trust" set "When using this certificate" to "Always Trust".
+Double click on the "localhost" cert that was just added. Under "Trust" set "When using this certificate" to "Always Trust".
 
 ### Run the development server:
 
