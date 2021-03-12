@@ -1,5 +1,5 @@
 const { createServer } = require('https')
-const { parse } = require('url')
+// const { parse } = require('url')
 const next = require('next')
 const fs = require('fs')
 const log = require('next/dist/build/output/log')
@@ -20,7 +20,12 @@ const httpsOptions = {
 
 app.prepare().then(() => {
   createServer(httpsOptions, (req, res) => {
-    const parsedUrl = parse(req.url, true)
+    /**
+     *  url.parse is deprecated:
+     *  https://nodejs.org/api/url.html#url_url_parse_urlstring_parsequerystring_slashesdenotehost
+     */
+    // const parsedUrl = parse(req.url, true)
+    const parsedUrl = new URL(req.url, `https://localhost:${port}`)
     handle(req, res, parsedUrl)
   }).listen(port, (err) => {
     if (err) throw err
