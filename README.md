@@ -10,7 +10,11 @@ A developer-friendly NextJS app configured with:
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) installed via [Node Version Manager](https://github.com/nvm-sh/nvm)
+- [Node.js](https://nodejs.org/) v15.11.0 or later
+
+Recommended:
+
+- [Node Version Manager](https://github.com/nvm-sh/nvm)
 
 ## Getting Started
 
@@ -29,7 +33,13 @@ Open the `.crt` file. The Keychain Access app will open and add it to the "Syste
 
 Double click on the "localhost" cert that was just added. Under "Trust" set "When using this certificate" to "Always Trust".
 
-### Run the development server:
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
 
 ```bash
 npm run dev
