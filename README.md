@@ -24,17 +24,6 @@ Recommended:
 npm install
 ```
 
-### Setup Husky Git Hooks
-
-#### Pre-commit
-```bash
-npx husky add .husky/pre-commit 'npm run lint && npm run format -- --staged && npm run test:pre-commit && npm run e2e:headless'
-```
-#### Pre-push
-```bash
-npx husky add .husky/pre-push 'npm run type-check'
-```
-
 ### Run the development server
 
 ```bash
