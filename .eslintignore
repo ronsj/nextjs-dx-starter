@@ -2,5 +2,4 @@
 **/out/*
 **/.next/*
 next-env.d.ts
-cypress/integration/examples
-cypress/fixtures/example.json
+
