@@ -18,25 +18,21 @@ Recommended:
 
 ## Getting Started
 
-### Enable HTTPS on localhost
-
-Create the public and private keys:
-
-```bash
-openssl req -x509 -out localhost.crt -keyout localhost.key \
-  -newkey rsa:2048 -nodes -sha256 \
-  -subj '/CN=localhost' -extensions EXT -config <( \
-   printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
-```
-
-Open the `.crt` file. The Keychain Access app will open and add it to the "System" keychain.
-
-Double click on the "localhost" cert that was just added. Under "Trust" set "When using this certificate" to "Always Trust".
-
 ### Install dependencies
 
 ```bash
 npm install
+```
+
+### Setup Husky Git Hooks
+
+#### Pre-commit
+```bash
+npx husky add .husky/pre-commit 'npm run lint && npm run format -- --staged && npm run test:pre-commit'
+```
+#### Pre-push
+```bash
+npx husky add .husky/pre-push 'npm run type-check'
 ```
 
 ### Run the development server
