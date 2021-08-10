@@ -28,7 +28,7 @@ npm install
 
 #### Pre-commit
 ```bash
-npx husky add .husky/pre-commit 'npm run lint && npm run format -- --staged && npm run test:pre-commit'
+npx husky add .husky/pre-commit 'npm run lint && npm run format -- --staged && npm run test:pre-commit && npm run e2e:headless'
 ```
 #### Pre-push
 ```bash
