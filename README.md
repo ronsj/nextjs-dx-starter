@@ -1,6 +1,6 @@
-# NextJS DX Starter Kit
+# NextJS Starter Kit
 
-A developer-friendly NextJS app configured with:
+A Next.js app configured with:
 
 - [Typescript](https://www.typescriptlang.org/)
 - Linting with [ESLint](https://eslint.org/)
